@@ -2,7 +2,6 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
-    id("com.google.gms.google-services")
 }
 
 def localProperties = new Properties()
@@ -63,13 +62,13 @@ android {
     flavorDimensions "default"
 
     productFlavors{
-        pro{
+        prod{
             resValue "string", "app_name", "Todo"
         }
 
         dev{
             resValue "string", "app_name", "Todo"
-            applicatioIdSuffix ".dev"
+            applicationIdSuffix ".dev"
         }
     }
 }
